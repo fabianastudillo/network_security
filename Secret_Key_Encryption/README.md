@@ -2,9 +2,9 @@
 
 ```bash
 # Encriptación
-$ tr 'a-z' 'vgapnbrtmosicuxejhqyzflkdwd' < plaintext > ciphertext
+$ tr 'a-z' 'vgapnbrtmosicuxejhqyzflkdw' < plaintext > ciphertext
 # Desencriptación
-$ tr 'vgapnbrtmosicuxejhqyzflkdwd' 'a-z' < plaintext > ciphertext
+$ tr 'vgapnbrtmosicuxejhqyzflkdw' 'a-z' < plaintext > ciphertext
 ```
 
 # Data Encryption Standard (DES)

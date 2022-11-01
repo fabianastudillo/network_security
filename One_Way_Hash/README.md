@@ -24,7 +24,7 @@ $ echo -n "Hello world" | sha256sum
 $ echo -n "Hallo world" | sha256sum
 ```
 
-# Verificación de la contraseña
+# Crear contraseñas desde la línea de comandos
 
 ```bash
 $ openssl passwd -6 -salt xyz password

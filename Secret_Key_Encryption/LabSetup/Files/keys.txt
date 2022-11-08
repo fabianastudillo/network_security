@@ -1,0 +1,3 @@
+2022 - Texto de Julio Verne - oicnveadpuztwsjmylfxghbqkr
+
+echo {a..z} | tr ' ' '\n' | shuf | tr '\n' ' ' | sed 's/ //g'

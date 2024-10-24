@@ -5,7 +5,7 @@
 #              Network Security course of the University of Cuenca.
 # Usage:       ./GenerateCipherFiles.sh
 #              Example: ./GenerateCipherFiles.sh
-# Author:      Your Name
+# Author:      Fabian Astudillo <fabian.astudillos@ucuenca.edu.ec>
 # Date:        2024-10-24
 # Version:     1.0
 # License:     MIT License

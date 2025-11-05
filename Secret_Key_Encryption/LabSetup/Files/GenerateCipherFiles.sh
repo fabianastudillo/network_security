@@ -19,6 +19,12 @@ mostrar_ayuda() {
     exit 0
 }
 
+# Mostrar ayuda si no hay parámetros
+if [ "$#" -eq 0 ]; then
+    echo "No se proporcionaron parámetros."
+    mostrar_ayuda
+fi
+
 # Valores por defecto
 crear_cifrado=false
 number_of_groups=5
@@ -36,8 +42,8 @@ extraer_texto_web() {
     
     # Descargar y procesar el texto
     curl -s "$url" | \
-        head -n 100 | \
-        tail -n 50 | \
+        head -n 1000 | \
+        tail -n 100 | \
         tr '[:upper:]' '[:lower:]' | \
         perl -pe '
             s/(\d+)/
@@ -51,7 +57,7 @@ extraer_texto_web() {
             /ge
         ' | \
         tr -cd '[a-z][\n][:space:]' | \
-        head -c 3000 > "$output_file"
+        head -c 10000 > "$output_file"
     echo "$output_file"
 }
 
@@ -93,11 +99,11 @@ if [ "$crear_cifrado" = true ]; then
     year="$current_year"
     period="${semester}-${year}"
     texto_archivo=$(extraer_texto_web "$period")
-fi
 
-echo "Archivos cifrados creados para $number_of_groups grupos."
-for i in $(seq 1 $number_of_groups); do    
-    clave=$(echo {a..z} | sed 's/ /\n/g' | shuf | tr '\n' ' ' | sed 's/ //g')
-    tr 'a-z' "$clave" < "$texto_archivo" > "textoCifradoGrupo${i}.bin"
-    echo "$clave" >> "claves-${year}.txt"
-done
+    echo "Archivos cifrados creados para $number_of_groups grupos."
+    for i in $(seq 1 $number_of_groups); do    
+        clave=$(echo {a..z} | sed 's/ /\n/g' | shuf | tr '\n' ' ' | sed 's/ //g')
+        tr 'a-z' "$clave" < "$texto_archivo" > "textoCifradoGrupo${i}.bin"
+        echo "$clave" >> "claves-${year}.txt"
+    done
+fi

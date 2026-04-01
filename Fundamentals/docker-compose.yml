@@ -1,5 +1,3 @@
-version: "3"
-
 services:
     attacker:
         image: handsonsecurity/seed-ubuntu:large
@@ -13,7 +11,7 @@ services:
                 - ./volumes:/volumes
         networks:
             net-10.9.0.0:
-                ipv4_address: 10.9.0.1
+                ipv4_address: 10.9.0.2
 
     hostA:
         image: handsonsecurity/seed-ubuntu:large
@@ -60,7 +58,7 @@ services:
                 - ./volumes:/volumes
         networks:
             net-192.168.60.0:
-                ipv4_address: 192.168.60.1
+                                ipv4_address: 192.168.60.2
         command: bash -c "
                       /etc/init.d/openbsd-inetd start  &&
                       tail -f /dev/null

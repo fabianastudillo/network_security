@@ -34,24 +34,25 @@ Este repositorio centraliza material práctico para estudiar conceptos clave de 
 
 ## Contenido del repositorio
 
-| Carpeta | Descripción |
-|---|---|
-| **Buffer_Overflow/** | Ejemplos en C sobre memoria, pila y vulnerabilidades por desbordamiento. |
-| **DNS_Local/** | Laboratorio de DNS local con contenedores, zonas y configuración de servidor. |
-| **DNS_Rebinding/** | Entorno de pruebas para ataques de DNS rebinding y aplicaciones de demostración. |
-| **Firewall/** | Ejercicios de firewall, módulo de kernel y filtrado de paquetes. |
-| **One_Way_Hash/** | Material relacionado con funciones hash de una sola vía. |
-| **Public_Key_Encryption/** | Ejemplos de criptografía asimétrica, incluyendo Diffie-Hellman. |
-| **Secret_Key_Encryption/** | Prácticas de cifrado simétrico, análisis y oráculos de cifrado. |
-| **Sniffing_Spoofing/** | Laboratorio para captura, análisis y manipulación de tráfico. |
-| **TCP_Attacks/** | Ejemplos y pruebas relacionadas con ataques a nivel TCP. |
-| **VPN_Tunnel/** | Laboratorio de túneles VPN y pruebas de conectividad. |
+Cada práctica del curso tiene su carpeta, con el mismo nombre que su fichero de
+instrucciones: `P-02-criptografia-de-clave-secreta/`,
+`P-09-exploracion-de-firewalls-netfilter-e-iptables/`… Dentro está el entorno del
+laboratorio (`Labsetup/`, `docker-compose.yml`, código de apoyo).
 
 ### Prácticas del curso
 
 Las instrucciones de las 18 prácticas del manual están en **[`practicas/`](practicas/)**,
 una por fichero Markdown, con objetivos, procedimiento, entregables y rúbrica.
-Empiece por las [normas generales del laboratorio](practicas/00-normas-generales.md).
+Empiece por las [normas generales del laboratorio](practicas/00-normas-generales.md);
+el [índice](practicas/README.md) enlaza cada práctica con su carpeta.
+
+### Otro material
+
+| Carpeta | Descripción |
+|---|---|
+| **Buffer_Overflow/** | Ejemplos en C sobre memoria, pila y vulnerabilidades por desbordamiento. |
+| **Fundamentals/** | Entorno Docker de sniffing y spoofing, con sus aliases y scripts de apoyo. |
+| **httptest/** | Página HTML de prueba. |
 
 ### Archivos destacados
 

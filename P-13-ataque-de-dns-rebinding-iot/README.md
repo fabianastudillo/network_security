@@ -1,4 +1,12 @@
+<div align="center">
+
 # P-13 · Ataque de DNS Rebinding (IoT)
+
+![Docker](https://img.shields.io/badge/Docker-Lab_Environment-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Python](https://img.shields.io/badge/Python-Scripts-yellow?style=for-the-badge&logo=python)
+![Security](https://img.shields.io/badge/Focus-Network_Security-critical?style=for-the-badge)
+
+</div>
 
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
 > Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../practicas/README.md)).

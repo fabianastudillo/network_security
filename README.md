@@ -47,6 +47,12 @@ Este repositorio centraliza material práctico para estudiar conceptos clave de 
 | **TCP_Attacks/** | Ejemplos y pruebas relacionadas con ataques a nivel TCP. |
 | **VPN_Tunnel/** | Laboratorio de túneles VPN y pruebas de conectividad. |
 
+### Prácticas del curso
+
+Las instrucciones de las 18 prácticas del manual están en **[`practicas/`](practicas/)**,
+una por fichero Markdown, con objetivos, procedimiento, entregables y rúbrica.
+Empiece por las [normas generales del laboratorio](practicas/00-normas-generales.md).
+
 ### Archivos destacados
 
 - **README.md**: vista general del proyecto.

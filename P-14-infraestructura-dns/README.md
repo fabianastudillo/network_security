@@ -9,7 +9,7 @@
 </div>
 
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
-> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../practicas/README.md)).
+> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../README.md)).
 
 > [!NOTE]
 > El entorno de esta práctica todavía no está publicado en esta carpeta.
@@ -58,7 +58,7 @@ Antes de la sesión de laboratorio, cada estudiante debe completar las siguiente
 - **AP1.** Repasar el funcionamiento del DNS (jerarquía, registros SOA, NS, A, PTR) y las referencias citadas.
 - **AP2.** Verificar que el entorno (VM SEED y el SEED Internet Emulator) esté operativo conforme al capítulo *Configuración del Entorno*.
 - **AP3.** Tomar una *snapshot* del estado inicial para poder revertir cambios.
-- **AP4.** Revisar la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio).
+- **AP4.** Revisar la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio).
 - **AP5.** Preparar la bitácora digital para registrar comandos, capturas y observaciones durante la sesión.
 
 ## Materiales y Equipos
@@ -107,12 +107,12 @@ as163h-Global_DNS-2-10.163.0.53     # resolvedor local 2
 
 ## Consideraciones de seguridad
 
-Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio). Para esta práctica se destacan los siguientes riesgos y precauciones específicas:
+Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio). Para esta práctica se destacan los siguientes riesgos y precauciones específicas:
 
 - **Aislamiento de red obligatorio**: toda la configuración se realiza dentro del emulador SEED. No modifique servidores DNS reales ni la configuración de red del anfitrión fuera del laboratorio.
 - **Snapshots y reversibilidad**: tome una instantánea antes de editar archivos de configuración (`named.conf.zones`, zonas, `root.hints`, `resolv.conf`).
 - **Marco legal**: aunque esta práctica no es ofensiva, la manipulación de infraestructura DNS ajena puede tipificarse como delito informático (COIP Arts. 229 y 234; LOPDP).
-- **Riesgos eléctricos y ergonomía**: aplique las pausas activas y verificaciones de las Secciones *Riesgos eléctricos* y *Ergonomía* dentro de Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio).
+- **Riesgos eléctricos y ergonomía**: aplique las pausas activas y verificaciones de las Secciones *Riesgos eléctricos* y *Ergonomía* dentro de Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio).
 
 > [!WARNING]
 > **Riesgos específicos de la práctica**
@@ -303,7 +303,7 @@ ns1.example.com. A   10.154.0.71
 
 ## Recolección y análisis de datos
 
-Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes (o equivalentes en su informe) forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../practicas/00-normas-generales.md#directrices-generales-para-el-informe-técnico) (Directrices generales para el informe técnico).
+Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes (o equivalentes en su informe) forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../README.md#directrices-generales-para-el-informe-técnico) (Directrices generales para el informe técnico).
 
 **Tabla 1.** Bitácora de comandos y observaciones
 

@@ -9,7 +9,7 @@
 </div>
 
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
-> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../practicas/README.md)).
+> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../README.md)).
 
 | Campo | Valor |
 | --- | --- |
@@ -59,7 +59,7 @@ Antes de la sesión de laboratorio, cada estudiante debe completar las siguiente
 - **AP1.** Repasar el funcionamiento del DNS y la Política del Mismo Origen, y las referencias citadas.
 - **AP2.** Verificar que el entorno virtual (VM SEED y contenedores Docker) esté operativo conforme al capítulo *Configuración del Entorno*.
 - **AP3.** Tomar una *snapshot* del estado inicial de cada VM involucrada en la práctica para poder revertir cambios.
-- **AP4.** Revisar la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio).
+- **AP4.** Revisar la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio).
 - **AP5.** Preparar la bitácora digital para registrar comandos, capturas y observaciones durante la sesión.
 
 ## Materiales y Equipos
@@ -86,12 +86,12 @@ Se usan seis máquinas en dos redes (Figura 1): una **red interna** (hogar, `192
 
 ## Consideraciones de seguridad
 
-Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio). Para esta práctica se destacan los siguientes riesgos y precauciones específicas:
+Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio). Para esta práctica se destacan los siguientes riesgos y precauciones específicas:
 
 - **Aislamiento de red obligatorio**: el ataque debe ejecutarse solo contra el IoT simulado del laboratorio. Está prohibido dirigirlo contra dispositivos, dominios o redes reales.
 - **Snapshots y reversibilidad**: tome una instantánea antes de modificar `/etc/hosts`, `/etc/resolv.conf`, la configuración de Firefox o las zonas de BIND.
-- **Marco legal**: el acceso no autorizado a dispositivos ajenos y la manipulación de DNS pueden tipificarse como delito informático (COIP Arts. 229 y 234; LOPDP). Véase el warningbox de la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio).
-- **Riesgos eléctricos y ergonomía**: aplique las pausas activas y verificaciones de las Secciones *Riesgos eléctricos* y *Ergonomía* dentro de Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio).
+- **Marco legal**: el acceso no autorizado a dispositivos ajenos y la manipulación de DNS pueden tipificarse como delito informático (COIP Arts. 229 y 234; LOPDP). Véase el warningbox de la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio).
+- **Riesgos eléctricos y ergonomía**: aplique las pausas activas y verificaciones de las Secciones *Riesgos eléctricos* y *Ergonomía* dentro de Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio).
 
 > [!WARNING]
 > **Riesgos específicos de la práctica**
@@ -202,7 +202,7 @@ http://www.attacker32.com
 
 ## Recolección y análisis de datos
 
-Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes (o equivalentes en su informe) forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../practicas/00-normas-generales.md#directrices-generales-para-el-informe-técnico) (Directrices generales para el informe técnico).
+Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes (o equivalentes en su informe) forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../README.md#directrices-generales-para-el-informe-técnico) (Directrices generales para el informe técnico).
 
 **Tabla 1.** Bitácora de comandos y observaciones
 

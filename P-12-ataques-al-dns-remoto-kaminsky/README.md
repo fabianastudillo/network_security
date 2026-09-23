@@ -9,7 +9,7 @@
 </div>
 
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
-> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../practicas/README.md)).
+> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../README.md)).
 
 > [!NOTE]
 > El entorno de esta práctica todavía no está publicado en esta carpeta.
@@ -62,7 +62,7 @@ Antes de la sesión de laboratorio, cada estudiante debe completar las siguiente
 - **AP1.** Completar la práctica P-11 (ataque al DNS local) y repasar el marco teórico y las referencias citadas.
 - **AP2.** Verificar que el entorno virtual (VM SEED y contenedores Docker) esté operativo conforme al capítulo *Configuración del Entorno*.
 - **AP3.** Tomar una *snapshot* del estado inicial de cada VM involucrada en la práctica para poder revertir cambios.
-- **AP4.** Revisar la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio).
+- **AP4.** Revisar la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio).
 - **AP5.** Preparar la bitácora digital para registrar comandos, capturas y observaciones durante la sesión.
 
 ## Materiales y Equipos
@@ -90,12 +90,12 @@ A diferencia del ataque local (P-11), aunque las máquinas estén en la misma LA
 
 ## Consideraciones de seguridad
 
-Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio). Para esta práctica se destacan los siguientes riesgos y precauciones específicas:
+Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio). Para esta práctica se destacan los siguientes riesgos y precauciones específicas:
 
 - **Aislamiento de red obligatorio**: el ataque debe ejecutarse exclusivamente contra el servidor DNS propio del laboratorio. Está prohibido dirigirlo contra servidores DNS reales, la red institucional o equipos de terceros.
 - **Snapshots y reversibilidad**: tome una instantánea antes de modificar configuraciones de BIND, la caché DNS o `/etc/hosts`.
-- **Marco legal**: el envenenamiento de caché DNS contra sistemas ajenos puede tipificarse como delito informático (COIP Arts. 229 y 234; Ley Orgánica de Protección de Datos Personales). Véase el warningbox de la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio).
-- **Riesgos eléctricos y ergonomía**: aplique las pausas activas y las verificaciones de las Secciones *Riesgos eléctricos* y *Ergonomía* dentro de Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio).
+- **Marco legal**: el envenenamiento de caché DNS contra sistemas ajenos puede tipificarse como delito informático (COIP Arts. 229 y 234; Ley Orgánica de Protección de Datos Personales). Véase el warningbox de la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio).
+- **Riesgos eléctricos y ergonomía**: aplique las pausas activas y las verificaciones de las Secciones *Riesgos eléctricos* y *Ergonomía* dentro de Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio).
 
 > [!WARNING]
 > **Riesgos específicos de la práctica**
@@ -231,7 +231,7 @@ $ dig @ns.attacker32.com www.example.com    # directo al NS atacante
 
 ## Recolección y análisis de datos
 
-Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes (o equivalentes en su informe) forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../practicas/00-normas-generales.md#directrices-generales-para-el-informe-técnico) (Directrices generales para el informe técnico).
+Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes (o equivalentes en su informe) forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../README.md#directrices-generales-para-el-informe-técnico) (Directrices generales para el informe técnico).
 
 **Tabla 1.** Bitácora de comandos y observaciones
 

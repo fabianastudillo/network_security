@@ -9,7 +9,7 @@
 </div>
 
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
-> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../practicas/README.md)).
+> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../README.md)).
 
 | Campo | Valor |
 | --- | --- |
@@ -103,7 +103,7 @@ $ docksh <id>    # shell en el contenedor (alias de docker exec)
 - **AP2.** Verificar que la SEED Ubuntu 20.04 VM esté operativa con los *kernel headers* instalados (`sudo apt install linux-headers-$(uname -r)`).
 - **AP3.** Verificar que Docker y Docker Compose estén instalados y funcionales (`docker-compose up`).
 - **AP4.** Tomar una *snapshot* de la VM antes de iniciar la práctica.
-- **AP5.** Revisar la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio) y el manual de iptables (`man iptables`).
+- **AP5.** Revisar la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio) y el manual de iptables (`man iptables`).
 
 ## Materiales y Equipos
 
@@ -123,7 +123,7 @@ $ docksh <id>    # shell en el contenedor (alias de docker exec)
 
 ## Consideraciones de seguridad
 
-Antes de iniciar, revise la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio). Para esta práctica se destacan:
+Antes de iniciar, revise la Sección [Seguridad y normas generales del laboratorio](../README.md#seguridad-y-normas-generales-del-laboratorio). Para esta práctica se destacan:
 
 - **Riesgo de crash del kernel**: modificar el kernel con un módulo defectuoso puede colgarlo. Haga *backup* frecuente de sus archivos. Asegúrese de llamar a `nf_unregister_net_hook` en la función de limpieza (`removeFilter`) para cada hook registrado; de lo contrario, al descargar el módulo se producirá un *kernel panic*.
 - **Restauración de iptables**: al terminar cada tarea, restaure la tabla `filter` (`iptables -F`, `iptables -P OUTPUT ACCEPT`, `iptables -P INPUT ACCEPT`) o reinicie el contenedor con `docker restart <ID>`.
@@ -623,7 +623,7 @@ Use este modo para implementar reglas de balanceo de carga que den a cada servid
 
 ## Recolección y análisis de datos
 
-Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../practicas/00-normas-generales.md#directrices-generales-para-el-informe-técnico).
+Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../README.md#directrices-generales-para-el-informe-técnico).
 
 **Tabla 2.** Bitácora de comandos y observaciones — P-09
 

@@ -1,7 +1,7 @@
 # P-09 · Exploración de Firewalls (Netfilter e iptables)
 
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
-> Documento generado desde el manual: no lo edite a mano (véase [`practicas/README.md`](README.md)).
+> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../practicas/README.md)).
 
 | Campo | Valor |
 | --- | --- |
@@ -95,7 +95,7 @@ $ docksh <id>    # shell en el contenedor (alias de docker exec)
 - **AP2.** Verificar que la SEED Ubuntu 20.04 VM esté operativa con los *kernel headers* instalados (`sudo apt install linux-headers-$(uname -r)`).
 - **AP3.** Verificar que Docker y Docker Compose estén instalados y funcionales (`docker-compose up`).
 - **AP4.** Tomar una *snapshot* de la VM antes de iniciar la práctica.
-- **AP5.** Revisar la Sección [Seguridad y normas generales del laboratorio](00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio) y el manual de iptables (`man iptables`).
+- **AP5.** Revisar la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio) y el manual de iptables (`man iptables`).
 
 ## Materiales y Equipos
 
@@ -115,7 +115,7 @@ $ docksh <id>    # shell en el contenedor (alias de docker exec)
 
 ## Consideraciones de seguridad
 
-Antes de iniciar, revise la Sección [Seguridad y normas generales del laboratorio](00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio). Para esta práctica se destacan:
+Antes de iniciar, revise la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio). Para esta práctica se destacan:
 
 - **Riesgo de crash del kernel**: modificar el kernel con un módulo defectuoso puede colgarlo. Haga *backup* frecuente de sus archivos. Asegúrese de llamar a `nf_unregister_net_hook` en la función de limpieza (`removeFilter`) para cada hook registrado; de lo contrario, al descargar el módulo se producirá un *kernel panic*.
 - **Restauración de iptables**: al terminar cada tarea, restaure la tabla `filter` (`iptables -F`, `iptables -P OUTPUT ACCEPT`, `iptables -P INPUT ACCEPT`) o reinicie el contenedor con `docker restart <ID>`.
@@ -500,7 +500,7 @@ El objetivo es usar experimentos para entender el concepto de ``conexión'' en e
 
 #### Tarea 3.B — Configurar un Firewall con Estado
 
-Ahora configuraremos reglas basadas en el estado de la conexión. La opción `-m conntrack` indica el uso del módulo conntrack. `–ctstate ESTABLISHED,RELATED` indica que el paquete pertenece a una conexión existente o relacionada:
+Ahora configuraremos reglas basadas en el estado de la conexión. La opción `-m conntrack` indica el uso del módulo conntrack. `--ctstate ESTABLISHED,RELATED` indica que el paquete pertenece a una conexión existente o relacionada:
 
 **Listado 23.** Regla stateful: permitir paquetes de conexiones establecidas
 
@@ -577,7 +577,7 @@ El módulo `statistic` implementa el balanceo. Ejecute `"iptables -m statistic -
 
 #### Modo nth (round-robin)
 
-En el Router, la siguiente regla aplica a todos los paquetes UDP al puerto 8080. El modo `nth` con `–every 3 –packet 0` selecciona 1 de cada 3 paquetes (el primero) y cambia su IP y puerto destino a `192.168.60.5:8080`:
+En el Router, la siguiente regla aplica a todos los paquetes UDP al puerto 8080. El modo `nth` con `--every 3 --packet 0` selecciona 1 de cada 3 paquetes (el primero) y cambia su IP y puerto destino a `192.168.60.5:8080`:
 
 **Listado 29.** Balanceo de carga round-robin: primer servidor
 
@@ -615,7 +615,7 @@ Use este modo para implementar reglas de balanceo de carga que den a cada servid
 
 ## Recolección y análisis de datos
 
-Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](00-normas-generales.md#directrices-generales-para-el-informe-técnico).
+Durante la ejecución del procedimiento, registre en su bitácora los datos solicitados a continuación. Las tablas siguientes forman parte del entregable, conforme a la Sección [Directrices generales para el informe técnico](../practicas/00-normas-generales.md#directrices-generales-para-el-informe-técnico).
 
 **Tabla 2.** Bitácora de comandos y observaciones — P-09
 
@@ -655,7 +655,7 @@ Durante la ejecución del procedimiento, registre en su bitácora los datos soli
 - **P5.** Explique la diferencia entre un firewall *stateless* y uno *stateful*. ¿En qué caso es necesario usar conntrack?
 - **P6.** ¿Por qué la cadena FORWARD es bidireccional y cómo se usa `-i`/`-o` para distinguir la dirección?
 - **P7.** En la Tarea 3.B, ¿por qué se necesita una regla adicional para los paquetes SYN además de la regla ESTABLISHED,RELATED?
-- **P8.** ¿Qué diferencia hay entre `–limit` y `–limit-burst`? Explique cómo funciona el balanceo con el modo `nth` y cómo elegir las probabilidades del modo `random` con tres servidores.
+- **P8.** ¿Qué diferencia hay entre `--limit` y `--limit-burst`? Explique cómo funciona el balanceo con el modo `nth` y cómo elegir las probabilidades del modo `random` con tres servidores.
 
 ## Actividad ABET — SO4: Responsabilidad Ética y Profesional
 
@@ -694,8 +694,6 @@ Cierre con **conclusiones** (3–5 viñetas) que resuman los hallazgos principal
 
 ## Rúbrica de Evaluación
 
-1.4
-
 **Tabla 4.** Rúbrica — P-09 (10 puntos)
 
 | Criterio | Peso | Indicador | Descripción |
@@ -708,8 +706,6 @@ Cierre con **conclusiones** (3–5 viñetas) que resuman los hallazgos principal
 | **ABET – SO4: Responsabilidad Ética y Profesional (30 %)** |   |   |   |
 | PI 4.1 – Ética profesional | 15 % | Respuesta ética fundamentada | Aplica principios éticos y legales al escenario del incidente; la cadena de notificación está justificada. |
 | PI 4.2 – Impacto integral | 15 % | Análisis de impacto | Evalúa impacto económico, social y ambiental con contramedidas técnicas y organizacionales, citando al menos un estándar internacional. |
-
-1.25
 
 **Tabla 5.** Escala ABET SO4 — P-09
 

@@ -1,7 +1,7 @@
 # P-00 · Inventario y Superficie de Ataque
 
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
-> Documento generado desde el manual: no lo edite a mano (véase [`practicas/README.md`](README.md)).
+> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](README.md)).
 
 | Campo | Valor |
 | --- | --- |
@@ -100,13 +100,13 @@ Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas genera
 
 ### Paso 2 — Servicios y versiones
 
-1. Sobre cada host descubierto, ejecute `sudo nmap -sV -p- –open <host>`.
+1. Sobre cada host descubierto, ejecute `sudo nmap -sV -p- --open <host>`.
 2. Registre puerto, protocolo, servicio, versión y estado en la Tabla 1.
 3. Para cada servicio, indique si es necesario para la función del host o si está ahí por omisión.
 
 ### Paso 3 — Inventario local
 
-1. En su propia VM ejecute `ss -tulpn` y `systemctl list-units –type=service –state=running`.
+1. En su propia VM ejecute `ss -tulpn` y `systemctl list-units --type=service --state=running`.
 2. Contraste lo que ve desde fuera (Paso 2) con lo que ve desde dentro: ¿hay servicios escuchando solo en `127.0.0.1`? ¿Alguno escucha en `0.0.0.0` sin necesidad?
 
 ### Paso 4 — Matriz de riesgo
@@ -186,8 +186,6 @@ Cierre con una lectura de su propia red: qué encontró que no esperaba, qué de
 
 ## Rúbrica de Evaluación
 
-1.35
-
 **Tabla 4.** Rúbrica — P-00 (10 puntos)
 
 | Criterio | Peso | Nivel alto (9–10) | Nivel medio (6–8) / bajo (0–5) |
@@ -199,8 +197,6 @@ Cierre con una lectura de su propia red: qué encontró que no esperaba, qué de
 | **ABET – SO4: Responsabilidad Ética y Profesional (30 %)** |   |   |   |
 | PI 4.1 – Ética profesional | 15 % | Decide correctamente sobre el hallazgo en red ajena, justifica el canal de notificación y cita el marco legal ecuatoriano | Decisión sin fundamento profesional o sin referencia legal |
 | PI 4.2 – Impacto integral | 15 % | Evalúa impacto económico, social y ambiental con contramedidas técnicas y organizacionales, citando un estándar internacional | Análisis parcial de impactos o sin contramedidas fundamentadas |
-
-1.25
 
 **Tabla 5.** Escala ABET SO4 — P-00
 

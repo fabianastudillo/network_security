@@ -1,7 +1,7 @@
 # Presentación del Manual
 
 > Capítulo del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
-> Documento generado desde el manual: no lo edite a mano.
+> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](README.md)).
 
 Este *Manual de Prácticas* es el documento guía de la componente **Aprendizaje Práctico Experimental (APE)** de la asignatura **Seguridad en Redes** (INGE-00107), Nivel 7 de la Carrera de Telecomunicaciones de la Universidad de Cuenca, período 202667-PA02 (septiembre 2026 – febrero 2027).
 
@@ -154,7 +154,7 @@ El uso de asistentes de IA (ChatGPT, Claude, Copilot, etc.) está permitido úni
 | Cód. | Unidad | Práctica | Herramienta |
 | --- | --- | --- | --- |
 | P-00 | 100. Introducción a la seguridad | Inventario y superficie de ataque | Nmap / ss / iptables |
-| P-01 | 200. Pentesting | Pentesting con ColdDBox (VulnHub) | Kali / Metasploit |
+| P-01 | 200. Pentesting | Pentesting con Metasploitable 3 | Kali / Nmap / Metasploit |
 | P-02 | 300. Criptografía | Criptografía de clave secreta | OpenSSL / Python |
 | P-03 | 300. Criptografía | Criptografía de clave pública (RSA) | OpenSSL / C |
 | P-04 | 400. Funciones hash | Ataque de colisión MD5 | md5collgen / bless |

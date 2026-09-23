@@ -1,7 +1,10 @@
 # P-00 · Inventario y Superficie de Ataque
 
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
-> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](README.md)).
+> Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../practicas/README.md)).
+
+> [!NOTE]
+> Esta práctica no necesita entorno propio: se hace sobre la red y los equipos del propio laboratorio.
 
 | Campo | Valor |
 | --- | --- |
@@ -64,7 +67,7 @@ Antes de la sesión de laboratorio, cada estudiante debe completar las siguiente
 - **AP1.** Leer el marco teórico de esta práctica y repasar la unidad 100 del curso.
 - **AP2.** Verificar que el entorno virtual (VMs SEED/Kali y red NAT) esté operativo conforme al capítulo *Configuración del Entorno: SEED VM en VirtualBox*.
 - **AP3.** Tomar una *snapshot* del estado inicial de cada VM.
-- **AP4.** Revisar la Sección [Seguridad y normas generales del laboratorio](00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio).
+- **AP4.** Revisar la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio) (Seguridad y normas generales del laboratorio).
 - **AP5.** Preparar la bitácora digital para registrar comandos y observaciones.
 
 ## Materiales y Equipos
@@ -84,7 +87,7 @@ Antes de la sesión de laboratorio, cada estudiante debe completar las siguiente
 
 ## Consideraciones de seguridad
 
-Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas generales del laboratorio](00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio). Adicionalmente:
+Antes de iniciar el procedimiento, revise la Sección [Seguridad y normas generales del laboratorio](../practicas/00-normas-generales.md#seguridad-y-normas-generales-del-laboratorio). Adicionalmente:
 
 - El escaneo se limita al rango de la red NAT del laboratorio o a la red propia del estudiante.
 - Los resultados pueden revelar servicios vulnerables de equipos personales: se anonimiza cualquier dirección que no sea del laboratorio antes de entregarlos.
@@ -178,7 +181,7 @@ Cierre con una lectura de su propia red: qué encontró que no esperaba, qué de
 
 ## Entregables
 
-1. Informe técnico de 4 páginas siguiendo las directrices de la Sección [Directrices generales para el informe técnico](00-normas-generales.md#directrices-generales-para-el-informe-técnico).
+1. Informe técnico de 4 páginas siguiendo las directrices de la Sección [Directrices generales para el informe técnico](../practicas/00-normas-generales.md#directrices-generales-para-el-informe-técnico).
 2. Tablas 1 a 3 completas, con las direcciones ajenas al laboratorio anonimizadas.
 3. Salidas de Nmap antes y después de la reducción, anotadas.
 4. Respuestas SO4-1 y SO4-2 en una sección propia del informe.

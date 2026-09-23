@@ -21,7 +21,7 @@ prácticas y cada una las da por sabidas.
 
 | Código | Práctica | Unidad | Entorno |
 | --- | --- | --- | --- |
-| **P-00** | [Inventario y Superficie de Ataque](P-00-inventario-y-superficie-de-ataque.md) | 100 – Introducción a la seguridad de redes | — |
+| **P-00** | [Inventario y Superficie de Ataque](../P-00-inventario-y-superficie-de-ataque) | 100 – Introducción a la seguridad de redes | no aplica |
 | **P-01** | [Introducción al Pentesting](../P-01-introduccion-al-pentesting) | 200 – Introducción a pentesting | pendiente |
 | **P-02** | [Criptografía de Clave Secreta](../P-02-criptografia-de-clave-secreta) | 300 – Criptografía de clave secreta | Docker |
 | **P-03** | [Criptografía de Clave Pública (RSA)](../P-03-criptografia-de-clave-publica-rsa) | 300 – Criptografía de clave pública | Docker |
@@ -42,7 +42,8 @@ prácticas y cada una las da por sabidas.
 
 La columna **Entorno** dice qué hay en la carpeta: `Docker` si trae el laboratorio
 listo para levantar, `código` si trae material de apoyo, `pendiente` si todavía no
-se ha publicado. P-00 no necesita entorno: se hace sobre la propia red del aula.
+se ha publicado y `no aplica` si la práctica se hace sobre la red del propio
+laboratorio.
 
 ## Cómo se usa
 

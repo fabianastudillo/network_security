@@ -19,7 +19,6 @@ Este repositorio centraliza material práctico para estudiar conceptos clave de 
 
 ### Temas cubiertos
 
-- Buffer Overflow
 - DNS local
 - DNS Rebinding
 - Firewalls y filtrado de paquetes
@@ -50,7 +49,6 @@ el [índice](practicas/README.md) enlaza cada práctica con su carpeta.
 
 | Carpeta | Descripción |
 |---|---|
-| **Buffer_Overflow/** | Ejemplos en C sobre memoria, pila y vulnerabilidades por desbordamiento. |
 | **Fundamentals/** | Entorno Docker de sniffing y spoofing, con sus aliases y scripts de apoyo. |
 | **httptest/** | Página HTML de prueba. |
 

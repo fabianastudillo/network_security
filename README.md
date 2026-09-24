@@ -216,14 +216,6 @@ El uso de asistentes de IA (ChatGPT, Claude, Copilot, etc.) está permitido úni
 
 ---
 
-## Otro material
-
-| Carpeta | Descripción |
-|---|---|
-| **httptest/** | Página HTML de prueba. |
-
----
-
 ## Tecnologías utilizadas
 
 Este repositorio combina varias herramientas y lenguajes según el tipo de laboratorio:

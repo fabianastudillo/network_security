@@ -220,7 +220,6 @@ El uso de asistentes de IA (ChatGPT, Claude, Copilot, etc.) está permitido úni
 
 | Carpeta | Descripción |
 |---|---|
-| **Fundamentals/** | Entorno Docker de sniffing y spoofing, con sus aliases y scripts de apoyo. |
 | **httptest/** | Página HTML de prueba. |
 
 ---

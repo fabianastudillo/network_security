@@ -4,6 +4,18 @@
 
 Laboratorio basado en SEED Labs para prácticas de **sniffing** y **spoofing** de paquetes de red usando contenedores Docker.
 
+</div>
+
+> [!NOTE]
+> Estas notas vienen de la antigua carpeta `Fundamentals/`, fusionada aquí.
+> La topología que describen (router y red `192.168.60.0/24`) es la de
+> `Labsetup/docker-compose-extendido.yml`; el `docker-compose.yml` por omisión
+> levanta solo el atacante y los hosts A y B, que es lo que pide el
+> [procedimiento de la práctica](README.md). Los comandos se ejecutan desde
+> `Labsetup/`.
+
+<div align="center">
+
 ![Docker](https://img.shields.io/badge/Docker-Lab_Environment-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-Scripts-yellow?style=for-the-badge&logo=python)
 ![Security](https://img.shields.io/badge/Focus-Network_Security-critical?style=for-the-badge)

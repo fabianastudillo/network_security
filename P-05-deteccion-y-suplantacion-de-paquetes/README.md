@@ -11,6 +11,9 @@
 > Práctica del **Manual de Prácticas** de Seguridad en Redes · INGE-00107 · Universidad de Cuenca.  
 > Documento generado desde el manual: no lo edite a mano (véase el [índice de prácticas](../README.md)).
 
+> [!TIP]
+> Apuntes de comandos del docente para esta práctica: [`NOTAS.md`](NOTAS.md).
+
 | Campo | Valor |
 | --- | --- |
 | **Asignatura** | Seguridad en Redes |

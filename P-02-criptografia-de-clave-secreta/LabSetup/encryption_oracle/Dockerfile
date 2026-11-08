@@ -1,4 +1,4 @@
-FROM handsonsecurity/seed-ubuntu:dev AS builder
+FROM fabianastudillo/labsecuc:latest AS builder
 
 # Copy the source code to the image
 COPY .  /oracle
@@ -7,7 +7,7 @@ WORKDIR /oracle
 RUN make
 
 
-FROM handsonsecurity/seed-ubuntu:small
+FROM fabianastudillo/labsecuc:latest
 
 # Copy the executable binaries to the image
 COPY --from=builder /oracle/build /oracle

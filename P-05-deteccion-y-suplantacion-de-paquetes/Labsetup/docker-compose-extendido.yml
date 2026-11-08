@@ -1,8 +1,8 @@
 services:
     attacker:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: seed-attacker
-        hostname: seed-attacker
+        hostname: attacker
         tty: true
         cap_add:
                 - ALL
@@ -14,9 +14,9 @@ services:
                 ipv4_address: 10.9.0.2
 
     hostA:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: hostA-10.9.0.5
-        hostname: hostA-10.9.0.5
+        hostname: hostA
         tty: true
         cap_add:
                 - ALL
@@ -31,9 +31,9 @@ services:
                  "
 
     hostB:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: hostB-10.9.0.6
-        hostname: hostB-10.9.0.6
+        hostname: hostB
         tty: true
         cap_add:
                 - ALL
@@ -48,9 +48,9 @@ services:
                  "
 
     hostC:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: hostC-192.168.60.1
-        hostname: hostC-192.168.60.1
+        hostname: hostC
         tty: true
         cap_add:
                 - ALL
@@ -65,9 +65,9 @@ services:
                  "
 
     hostD:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: hostD-192.168.60.5
-        hostname: hostD-192.168.60.5
+        hostname: hostD
         tty: true
         cap_add:
                 - ALL
@@ -82,9 +82,9 @@ services:
                  "
 
     hostE:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: hostE-192.168.60.6
-        hostname: hostE-192.168.60.6
+        hostname: hostE
         tty: true
         cap_add:
                 - ALL
@@ -99,7 +99,7 @@ services:
                  "
 
     router:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: router
         hostname: router
         tty: true

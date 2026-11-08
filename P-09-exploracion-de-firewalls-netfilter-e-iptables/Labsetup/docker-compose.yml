@@ -1,8 +1,8 @@
 services:
     HostA:
-        build: clients
-        image: seed-client-image
+        image: fabianastudillo/labsecuc:latest
         container_name: hostA-10.9.0.5
+        hostname: hostA
         tty: true
         cap_add:
                 - ALL
@@ -12,15 +12,18 @@ services:
             net-10.9.0.0:
                 ipv4_address: 10.9.0.5
         command: bash -c "
+                      apt-get install -y openssh-server openssh-client -qq &&
+                      mkdir -p /run/sshd &&
+                      echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config &&
                       /etc/init.d/openbsd-inetd start  &&
                       service ssh start &&
                       tail -f /dev/null
                  "
 
     Host1:
-        build: clients
-        image: seed-client-image
+        image: fabianastudillo/labsecuc:latest
         container_name: host1-192.168.60.5
+        hostname: host1
         tty: true
         cap_add:
                 - ALL
@@ -30,17 +33,20 @@ services:
             net-192.168.60.0:
                 ipv4_address: 192.168.60.5
         command: bash -c "
+                      apt-get install -y openssh-server openssh-client -qq &&
+                      mkdir -p /run/sshd &&
+                      echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config &&
                       ip route del default  &&
                       ip route add default via 192.168.60.11  &&
                       /etc/init.d/openbsd-inetd start  &&
                       service ssh start &&
                       tail -f /dev/null
                  "
-                  
+
     Host2:
-        build: clients
-        image: seed-client-image
+        image: fabianastudillo/labsecuc:latest
         container_name: host2-192.168.60.6
+        hostname: host2
         tty: true
         cap_add:
                 - ALL
@@ -50,6 +56,9 @@ services:
             net-192.168.60.0:
                 ipv4_address: 192.168.60.6
         command: bash -c "
+                      apt-get install -y openssh-server openssh-client -qq &&
+                      mkdir -p /run/sshd &&
+                      echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config &&
                       ip route del default  &&
                       ip route add default via 192.168.60.11  &&
                       /etc/init.d/openbsd-inetd start  &&
@@ -58,9 +67,9 @@ services:
                  "
 
     Host3:
-        build: clients
-        image: seed-client-image
+        image: fabianastudillo/labsecuc:latest
         container_name: host3-192.168.60.7
+        hostname: host3
         tty: true
         cap_add:
                 - ALL
@@ -70,6 +79,9 @@ services:
             net-192.168.60.0:
                 ipv4_address: 192.168.60.7
         command: bash -c "
+                      apt-get install -y openssh-server openssh-client -qq &&
+                      mkdir -p /run/sshd &&
+                      echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config &&
                       ip route del default  &&
                       ip route add default via 192.168.60.11  &&
                       /etc/init.d/openbsd-inetd start  &&
@@ -78,9 +90,9 @@ services:
                  "
 
     Router:
-        build: router
-        image: seed-router-image
+        image: fabianastudillo/labsecuc:latest
         container_name: seed-router
+        hostname: router
         tty: true
         cap_add:
                 - ALL
@@ -97,6 +109,9 @@ services:
             net-192.168.60.0:
                 ipv4_address: 192.168.60.11
         command: bash -c "
+                      apt-get install -y kmod openssh-server openssh-client -qq &&
+                      mkdir -p /run/sshd &&
+                      echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config &&
                       ip route del default  &&
                       ip route add default via 10.9.0.1 &&
                       /etc/init.d/openbsd-inetd start  &&

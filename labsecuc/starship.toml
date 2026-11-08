@@ -1,0 +1,166 @@
+# Prompt powerline para los laboratorios: Tux en cápsula oscura, ruta en azul
+# y bloque git en verde con los contadores en naranja (estilo de la captura 1).
+#
+# Separadores powerline:  (U+E0B0, derecha) y  (U+E0B2, izquierda).
+# Requiere una Nerd Font en la terminal para los glifos    .
+#
+# Robustez: os y directory van conectados (siempre presentes); el bloque git
+# es una cápsula propia, así que si no hay repo no deja cuñas huérfanas.
+
+add_newline = true
+palette = "lab"
+
+format = """
+$os\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$cmd_duration\
+$status\
+$username\
+$hostname\
+$time\
+$line_break\
+$character"""
+
+[palettes.lab]
+oscuro  = "#30343c"   # cápsula del SO (Tux)
+azul    = "#2f6fb5"   # ruta
+verde   = "#39a845"   # git
+naranja = "#f2b23a"   # contadores de git
+gris    = "#454a53"   # duración / hora
+rojo    = "#d2443a"   # errores
+claro   = "#e8eaed"   # texto sobre fondos oscuros
+oscuroT = "#15181d"   # texto sobre verde (rama)
+
+[fill]
+symbol = " "
+
+# --- SO: cápsula oscura con el icono del SO, conectada con la ruta ---
+# Símbolos oficiales del preset nerd-font-symbols (https://starship.rs/presets/nerd-font).
+[os]
+disabled = false
+format = "[ $symbol](fg:claro bg:oscuro)[](fg:oscuro bg:azul)"
+[os.symbols]
+AIX = " "
+AlmaLinux = " "
+Alpaquita = " "
+Alpine = " "
+ALTLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+Bazzite = " "
+Bluefin = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Hurd = " "
+Illumos = " "
+InstantOS = " "
+Ios = "󰀷 "
+Kali = " "
+KDENeon = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = " "
+OpenCloudOS = " "
+openEuler = " "
+openSUSE = " "
+OracleLinux = "󰺡 "
+PikaOS = " "
+Pop = " "
+Raspbian = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+Redox = "󰀘 "
+RockyLinux = " "
+Solus = " "
+SUSE = " "
+Ubuntu = " "
+Ultramarine = " "
+Unknown = " "
+Uos = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+
+# --- Ruta: cápsula azul con icono de carpeta; cierra en punta al terminal ---
+[directory]
+style = "fg:claro bg:azul"
+format = "[  $path$read_only ](bold $style)[](fg:azul) "
+truncation_length = 4
+truncation_symbol = "…/"
+truncate_to_repo = false
+read_only = " 󰌾"
+
+# --- Git: cápsula verde propia (rama oscura + estado en naranja) ---
+# Símbolo oficial del preset nerd-font-symbols.
+[git_branch]
+symbol = " "
+format = "[](fg:verde)[ $symbol$branch](fg:oscuroT bg:verde)"
+
+[git_status]
+format = "[$all_status$ahead_behind](fg:naranja bg:verde)[](fg:verde) "
+conflicted = " =${count}"
+untracked = " ?${count}"
+modified = " !${count}"
+staged = " +${count}"
+renamed = " »${count}"
+deleted = " ✘${count}"
+stashed = " *${count}"
+ahead = " ⇡${count}"
+behind = " ⇣${count}"
+
+# --- Duración: cápsula gris (solo si tardó ≥500 ms) ---
+[cmd_duration]
+min_time = 500
+format = "[](fg:gris)[  $duration ](fg:claro bg:gris)[](fg:gris) "
+
+# --- Estado de salida: cápsula roja (solo si hubo error) ---
+[status]
+disabled = false
+format = "[](fg:rojo)[ ✘ $status ](bold fg:claro bg:rojo)[](fg:rojo) "
+
+# --- Contexto usuario@host: cápsula azul fusionada ---
+[username]
+show_always = true
+style_user = "fg:claro bg:azul"
+style_root = "bold fg:claro bg:azul"
+format = "[](fg:azul)[ $user](bold $style)"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname ](fg:claro bg:azul)[](fg:azul) "
+
+# --- Hora: cápsula gris ---
+[time]
+disabled = false
+format = "[](fg:gris)[  $time ](fg:claro bg:gris)[](fg:gris)"
+time_format = "%H:%M:%S"
+
+# --- Carácter de prompt: verde en éxito, rojo en error ---
+[character]
+success_symbol = "[❯](bold fg:verde)"
+error_symbol = "[❯](bold fg:rojo)"
+vicmd_symbol = "[❮](bold fg:claro)"

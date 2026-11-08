@@ -4,6 +4,7 @@ services:
         build: ./ssh
         image: seed-image-ssh
         container_name: ssh-10.9.0.80
+        hostname: ssh-server
         tty: true
         cap_add:
                 - ALL

@@ -1,16 +1,40 @@
-version: "3"
-
 services:
     oracle-server:
         build: ./encryption_oracle
         image: seed-image-encryption
         container_name: oracle-10.9.0.80
+        hostname: oracle
         tty: true
         cap_add:
                 - ALL
         networks:
             net-10.9.0.0:
                 ipv4_address: 10.9.0.80
+
+    cliente:
+        image: fabianastudillo/labsecuc:latest
+        container_name: cliente-10.9.0.5
+        hostname: cliente
+        tty: true
+        cap_add:
+                - ALL
+        depends_on:
+                - oracle-server
+        networks:
+            net-10.9.0.0:
+                ipv4_address: 10.9.0.5
+        command: bash -c "
+                      echo '==================================================' ;
+                      echo ' P-02 - Oraculo de cifrado (IV conocido)' ;
+                      echo ' El oraculo escucha en  10.9.0.80:3000' ;
+                      echo '' ;
+                      echo ' Para conectarte, entra a este host cliente:' ;
+                      echo '   docker exec -it cliente-10.9.0.5 bash' ;
+                      echo ' y dentro ejecuta:' ;
+                      echo '   nc 10.9.0.80 3000' ;
+                      echo '==================================================' ;
+                      tail -f /dev/null
+                 "
 
 networks:
     net-10.9.0.0:

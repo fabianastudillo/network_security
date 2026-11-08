@@ -1,9 +1,8 @@
-version: "3"
-
 services:
     attacker:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: seed-attacker
+        hostname: attacker
         tty: true
         cap_add:
                 - ALL
@@ -13,8 +12,9 @@ services:
         network_mode: host
 
     hostA:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: hostA-10.9.0.5
+        hostname: hostA
         tty: true
         cap_add:
                 - ALL
@@ -22,13 +22,16 @@ services:
             net-10.9.0.0:
                 ipv4_address: 10.9.0.5
         command: bash -c "
+                      ssh-keygen -A  &&
+                      /etc/init.d/ssh start  &&
                       /etc/init.d/openbsd-inetd start  &&
                       tail -f /dev/null
                  "
 
     hostB:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: hostB-10.9.0.6
+        hostname: hostB
         tty: true
         cap_add:
                 - ALL
@@ -36,6 +39,8 @@ services:
             net-10.9.0.0:
                 ipv4_address: 10.9.0.6
         command: bash -c "
+                      ssh-keygen -A  &&
+                      /etc/init.d/ssh start  &&
                       /etc/init.d/openbsd-inetd start  &&
                       tail -f /dev/null
                  "

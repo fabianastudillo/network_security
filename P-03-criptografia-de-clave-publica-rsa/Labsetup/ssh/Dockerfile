@@ -1,4 +1,4 @@
-FROM handsonsecurity/seed-ubuntu:small
+FROM fabianastudillo/labsecuc:latest
 
 # Install SSH server and sudo in a single layer to minimize image size
 RUN apt-get update && \

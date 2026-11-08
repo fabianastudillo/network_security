@@ -1,9 +1,8 @@
-version: "3"
-
 services:
     HostA:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: hostA-10.9.0.5
+        hostname: hostA
         tty: true
         cap_add:
                 - ALL
@@ -19,8 +18,9 @@ services:
                  "
 
     Host1:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: host1-192.168.60.5
+        hostname: host1
         tty: true
         cap_add:
                 - ALL
@@ -35,8 +35,9 @@ services:
                  "
                   
     Host2:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: host2-192.168.60.6
+        hostname: host2
         tty: true
         cap_add:
                 - ALL
@@ -51,8 +52,9 @@ services:
                  "
 
     Host3:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: host3-192.168.60.7
+        hostname: host3
         tty: true
         cap_add:
                 - ALL
@@ -70,6 +72,7 @@ services:
         build: router
         image: seed-router-image
         container_name: seed-router
+        hostname: router
         tty: true
         cap_add:
                 - ALL

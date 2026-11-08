@@ -1,9 +1,8 @@
-version: "3"
-
 services:
     Router:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: seed-router
+        hostname: router
         tty: true
         cap_add:
                 - ALL
@@ -25,6 +24,7 @@ services:
         build: ./image_local_dns_server
         image: seed-local-dns-server
         container_name: local-dns-server-10.9.0.53
+        hostname: local-dns
         tty: true
         cap_add:
                 - ALL
@@ -41,6 +41,7 @@ services:
         build: ./image_user
         image: seed-user
         container_name: user-10.9.0.5
+        hostname: user
         tty: true
         cap_add:
                 - ALL
@@ -54,8 +55,9 @@ services:
                  "
 
     attacker:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: seed-attacker
+        hostname: attacker
         tty: true
         cap_add:
                 - ALL
@@ -68,6 +70,7 @@ services:
         build: ./image_attacker_ns
         image: seed-attacker-ns
         container_name: attacker-ns-10.9.0.153
+        hostname: attacker-ns
         tty: true
         cap_add:
                 - ALL

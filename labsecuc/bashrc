@@ -1,0 +1,31 @@
+
+#=========================================
+# Añadido para los laboratorios (igual que SEED)
+
+alias ll='ls -l'
+PATH=$PATH:.
+
+#=========================================
+# Prompt "hacker" con Starship + tmux automático
+# (sólo afecta a shells interactivas; los "bash -c" del docker-compose
+#  no llevan la 'i' en $-, así que no se ven alterados)
+
+if [[ $- == *i* ]]; then
+
+    # Prompt: Starship si está disponible; si no, un PS1 verde de respaldo.
+    if command -v starship >/dev/null 2>&1; then
+        export STARSHIP_CONFIG=/etc/starship.toml
+        eval "$(starship init bash)"
+    else
+        PS1='\[\e[1;32m\]\u@\h\[\e[0m\]:\[\e[1;36m\]\w\[\e[0m\]\$ '
+    fi
+
+    # Por defecto la shell abre SIN tmux. Para entrar directo a tmux
+    # (sesión "main", -A se adjunta si ya existe), exportar TMUX_AUTO=1,
+    # p. ej. "docker exec -e TMUX_AUTO=1 -it <contenedor> bash".
+    if [ -n "$TMUX_AUTO" ] && command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
+        exec tmux new-session -A -s main
+    fi
+
+fi
+#=========================================

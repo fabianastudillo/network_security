@@ -1,7 +1,8 @@
 services:
     attacker:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: seed-attacker
+        hostname: attacker
         tty: true
         cap_add:
                 - ALL
@@ -12,8 +13,9 @@ services:
 
 
     Victim:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: victim-10.9.0.5
+        hostname: victim
         tty: true
         cap_add:
                 - ALL
@@ -34,8 +36,9 @@ services:
                  "
                   
     User1:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: user1-10.9.0.6
+        hostname: user1
         tty: true
         cap_add:
                 - ALL
@@ -52,8 +55,9 @@ services:
 
 
     User2:
-        image: handsonsecurity/seed-ubuntu:large
+        image: fabianastudillo/labsecuc:latest
         container_name: user2-10.9.0.7
+        hostname: user2
         tty: true
         cap_add:
                 - ALL
